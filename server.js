@@ -6,7 +6,12 @@ const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  // Increase the timeout for buffering commands (in milliseconds)
+  bufferTimeoutMS: 30000, // Set to 30 seconds
+};
 // MongoDB connection
 // const mongoURI = 'mongodb+srv://universalgrowthgroup:LbiuVIs4Q0DQvyqT@cluster0.qcviqmn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const mongoURI = 'mongodb://localhost:27017/DADU';
